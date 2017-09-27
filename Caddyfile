@@ -1,0 +1,41 @@
+https://grindvoll.org https://www.grindvoll.org {
+        root public
+        gzip
+        log logs/grindvoll-access.log
+
+        tls stian@grindvoll.org
+        upload /screenshot/upload {
+                to "{$SSPATH}"
+                hmac_keys_in stian={$CADDY_UPLOAD_HMAC}
+                filenames_form      NFC
+                filenames_in        u0000–u007F u0100–u017F u0391–u03C9 u2018–u203D u2152–u217F
+        }
+
+}
+https://grindvoll.org/screenshot https://www.grindvoll.org/screenshot {
+        root {$SSPATH}
+        gzip
+        log logs/grindvoll-access.log
+        tls stian@grindvoll.org
+}
+https://melt.grindvoll.org {
+        gzip
+        proxy / 127.0.0.1:8888
+        tls stian@grindvoll.org
+}
+https://api.grindvoll.org {
+        log /{$LOGCONTENT} logs/{$LOGCONTENT}.json "{request_body}"
+        gzip
+        tls stian@grindvoll.org
+        status  200 /
+}
+
+https://lindasindre.grindvoll.org {
+        gzip
+        proxy / bryllupsdagen.no/lindasindre/
+        tls stian@grindvoll.org
+}
+http://lindasindre.grindvoll.org {
+        gzip
+        proxy / bryllupsdagen.no/lindasindre/
+}

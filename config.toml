@@ -1,0 +1,60 @@
+baseurl = "//grindvoll.org/"
+title = "Stian Grindvoll"
+author = "Stian Grindvoll"
+theme = "cocoa"
+githubuser = "stiangrindvoll"
+contentdir          = "content"
+languageCode        = "en-US"
+layoutdir           = "layouts"
+publishdir          = "public"
+
+
+[permalinks]
+blog  = "blog/:slug/"
+
+[[menu.main]]
+name                   = "Blog"
+weight                 = -120
+identifier             = "blog"
+url                    = "/blog/"
+
+[[menu.main]]
+name                   = "About"
+weight                 = -110
+identifier             = "about"
+url                    = "/about/"
+
+
+[params]
+author = "Stian Grindvoll"
+email = "stian@grindvoll.org"
+selfintro              = "Thoughts, ideas and projects"
+latestpostscount       = 5
+dateform               = "Jan 2, 2006"
+dateformfull           = "Mon Jan 2 2006"
+description = "Thoughts, ideas and projects"
+i18n_flags             = false
+github                 = "//github.com/stiangrindvoll"
+highlightjs            = true
+lang                   = "en"
+twitter                = "//twitter.com/stiangrindvoll"
+faviconfile            = "img/favicon.png"
+avatar                 = "img/avatar.jpg"
+highlightjslanguages = ["go"] 
+# highlightjsStyle     = "darcula"
+
+#[params.highlight]
+#style = "github"
+#languages = ["go", "dockerfile"]
+#
+#[[params.social]]
+#url = "https://github.com/stiangrindvoll"
+#fa_icon = "fa-github"
+
+#[[params.social]]
+#url = "https://twitter.com/stiangrindvoll"
+#fa_icon = "fa-twitter"
+
+#[[params.social]]
+#url = "/index.xml"
+#fa_icon = "fa-rss"
