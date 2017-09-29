@@ -7,4 +7,4 @@ title = "about"
 
 ## About grindvoll.org
 
-Time is ticking..
+Time is ticking... so is space..
