@@ -5,12 +5,16 @@ https://grindvoll.org https://www.grindvoll.org {
 
         tls stian@grindvoll.org
         upload /screenshot/upload {
-                to "{$SSPATH}"
+                to {$SSPATH}
                 hmac_keys_in stian={$CADDY_UPLOAD_HMAC}
                 filenames_form      NFC
                 filenames_in        u0000–u007F u0100–u017F u0391–u03C9 u2018–u203D u2152–u217F
         }
-
+	git https://github.com/stiangrindvoll/grindvoll.org.git {
+		hook /webhook {$HOOKSECRET}
+		path {$ROOTPATH}
+		then hugo
+	}
 }
 https://grindvoll.org/screenshot https://www.grindvoll.org/screenshot {
         root {$SSPATH}
