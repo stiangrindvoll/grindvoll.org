@@ -5,6 +5,6 @@ title = "about"
 
 +++
 
-## About grindvoll.org
+## About this
 
-Time is ticking... so is space..
+According to some people i am the mediator, introverted and intuitive.
