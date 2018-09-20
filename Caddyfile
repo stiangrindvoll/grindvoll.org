@@ -40,13 +40,3 @@ https://api.grindvoll.org {
         tls stian@grindvoll.org
         status  200 /
 }
-
-https://lindasindre.grindvoll.org {
-        gzip
-        proxy / bryllupsdagen.no/lindasindre/
-        tls stian@grindvoll.org
-}
-http://lindasindre.grindvoll.org {
-        gzip
-        proxy / bryllupsdagen.no/lindasindre/
-}
