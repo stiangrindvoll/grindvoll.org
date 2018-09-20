@@ -1,4 +1,4 @@
-baseurl = "//grindvoll.org/"
+#baseurl = "//grindvoll.org/"
 title = "Stian Grindvoll"
 author = "Stian Grindvoll"
 theme = "cocoa"
