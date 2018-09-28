@@ -1,0 +1,20 @@
+{
+  "servername": "",
+  "port": 3000,
+  "driver": "disk",
+  "readURL": "https://gaia.grindvoll.org/",
+  "proofsConfig": {
+    "proofsRequired" : 2
+  },
+  "diskSettings": {
+     "storageRootDirectory": "/tmp/gaia-disk"
+  },
+  "argsTransport": {
+    "level": "debug",
+    "handleExceptions": true,
+    "stringify": true,
+    "timestamp": true,
+    "colorize": false,
+    "json": true
+  }
+}

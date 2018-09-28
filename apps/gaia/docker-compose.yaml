@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  gaiahub:
+    build:
+      context: ~/source/gaia/hub
+    hostname: gaiahub
+    environment:
+      - CONFIG_PATH=/src/hub/config.json
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - ./config.json:/src/hub/config.json
+      - ./data:/tmp/gaia-disk
