@@ -9,4 +9,4 @@ tcpbind:
 all: fetch
 
 run:
-	caddy
+	caddy -quic
